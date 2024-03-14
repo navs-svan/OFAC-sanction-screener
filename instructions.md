@@ -39,6 +39,8 @@
         chroot_list_file=/etc/vsftpd.chroot_list # or just uncomment
         ssl_enable=YES
         require_ssl_reuse=NO # add to the bottom of the file
+        force_local_logins_ssl=NO
+        force_local_data_ssl=NO
         ```
     * _CTRL-S_ + _CTRZ-X_ to save and exit the text editor
 * Restart service of vsftpd (EVERY CHANGES MADE)

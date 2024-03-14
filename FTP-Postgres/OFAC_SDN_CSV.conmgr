@@ -1,0 +1,128 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="OFAC_SDN_CSV"
+  DTS:DTSID="{9C08B67B-BCE4-4E71-A9F5-CF34CD09CA19}"
+  DTS:Description="OFAC_SDN_CSV"
+  DTS:CreationName="FLATFILE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:Format="Delimited"
+      DTS:LocaleID="13321"
+      DTS:HeaderRowDelimiter="_x000D__x000A_"
+      DTS:ColumnNamesInFirstDataRow="True"
+      DTS:RowDelimiter=""
+      DTS:TextQualifier="_x0022_"
+      DTS:CodePage="1252"
+      DTS:ConnectionString="D:\end-to-end-data-project\Extracts\OFAC_SDN.csv">
+      <DTS:FlatFileColumns>
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:DataType="3"
+          DTS:TextQualified="True"
+          DTS:ObjectName="ent_num"
+          DTS:DTSID="{FE91CA58-EB5B-4739-8C5F-C73B9CE2A16C}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="350"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="SDN_Name"
+          DTS:DTSID="{FB6B8649-E408-4E58-8135-FBF07C82F0BD}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="12"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="SDN_Type"
+          DTS:DTSID="{079D4EA5-D6C3-47E5-8961-D2DEB621CE6F}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="200"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Program"
+          DTS:DTSID="{B60A7F52-6552-49DB-9D3D-5B061843CB0B}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="200"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Title"
+          DTS:DTSID="{BCE340D4-EEB4-45E0-B21D-C018752BE4E4}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="8"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Call_Sign"
+          DTS:DTSID="{4E9AEB01-9307-4A05-9F2D-454D0D535FBF}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="25"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Vess_type"
+          DTS:DTSID="{27EABCA6-F033-445B-8DE1-68AE38D9DC10}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="14"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Tonnage"
+          DTS:DTSID="{6C6A9EA4-5C68-4C57-96CB-4B4894D6EDA6}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="8"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="GRT"
+          DTS:DTSID="{BAF8E1B7-A0A6-48EE-A6B8-0A72E54E8261}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="40"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Vess_flag"
+          DTS:DTSID="{88E2B46E-6974-4DB1-93C5-13AFC83D9C4E}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="150"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Vess_owner"
+          DTS:DTSID="{FBF2A975-C4DE-437D-B244-8E6BA041363B}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x000D__x000A_"
+          DTS:MaximumWidth="1000"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Remarks"
+          DTS:DTSID="{71D720D4-AAED-47B3-ACF3-45136E546AD6}"
+          DTS:CreationName="" />
+      </DTS:FlatFileColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

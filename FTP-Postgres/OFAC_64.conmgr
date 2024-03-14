@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="OFAC_64"
+  DTS:DTSID="{8214753E-114B-436D-AB2B-CF77A44E3DC6}"
+  DTS:CreationName="ODBC">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Dsn=OFAC_64;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
