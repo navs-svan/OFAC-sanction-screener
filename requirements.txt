@@ -2,5 +2,8 @@ requests
 pandas
 sqlalchemy
 psycopg2
-ipykernel
 pyarrow
+fastapi
+uvicorn[standard]
+rapidfuzz
+orjson
