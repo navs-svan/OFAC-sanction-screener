@@ -9,10 +9,10 @@
       <DTS:FtpConnection
         DTS:ServerName="172.23.125.83"
         DTS:ServerUserName="ftpuser"
-        DTS:UsePassiveMode="False">
+        DTS:TimeOut="10">
         <DTS:Property
           DTS:Name="ServerPassword"
-          Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnH/IGLWdqEWK8tMxXCbNlwAAAAACAAAAAAAQZgAAAAEAACAAAAAqIOXdRPM39IgM34iia2si1ntFE2SrtZpeXo2ck2hsYwAAAAAOgAAAAAIAACAAAACUOMPkkYH8taim8MfXUilGhKvfmglz3WXdwshzDqMbH4AAAADqQstUTaxHIvYv7/GAvpjpqEMmVqjzcN1TDRnS45Dck2a9d8ZiXJR1t4+zOrS9XLPOQplHRM9zwDdhx7RKnpHNB6VpADOWFemm+kFMijQJ5Vf0OIqZN22c4k0neZFoh0aUaybWzWUTu7tO/CHNBFp3MN03sYaICGWZqsOfiQJTW0AAAADUe/rvHpuawzrp8OlTNPGCTt98UmVdrnvW84m1wnObhfINZRFMspPOoHguadgjZ3XoOWo3NPImIAfgDzQZ+Q2L</DTS:Property>
+          Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnH/IGLWdqEWK8tMxXCbNlwAAAAACAAAAAAAQZgAAAAEAACAAAAB4VKKbeN61FJny1HV5OgM5WSpBqYeU5uRvU1iwa0QS8gAAAAAOgAAAAAIAACAAAABBRtRfRRRuEb7e1A4smLgmxFFBOSDbK5ib0EakBRJB44AAAAB9LPTktfEdE4hipsatDqkioXaB27UeBjoS0BCSrCe0jpaGQ3FusJ+6yQZ4ccMfDvYRWGxkSyegdytb8gAR/qS1Yj95EwjuC+Vix6JpUE+PE5HD5xsmbASL60zu8Sw9wjE3Y3UeSob1PkoVUimqMAIfwQD91GrBPgf6Hl1o5Mzkd0AAAAD+h07Peqh1Z5xi8nYKH96FiAYR9xGC4qXehpF6uj/qiXf4OyXI+q24x+r0EHoVCzomShj+rNknILIGNxvbUhq6</DTS:Property>
       </DTS:FtpConnection>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
