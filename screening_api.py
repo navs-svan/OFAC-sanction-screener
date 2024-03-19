@@ -138,6 +138,7 @@ async def screen(
     name: str,
     request: Request,
     threshold: float = 0.75,
+    is_sorted: bool = True,
 ) -> dict[str, Any]:
     """
     Summary: "/screen" endpoint of the API
@@ -145,16 +146,15 @@ async def screen(
     Arguments:
         name (str): the name to be searched against the database
         request (Request): class representing the incoming request
-        threshold (float, optional): Threshold for similarity between 
-            name argument and names in the table. Defaults to 0.75
+        threshold (float, optional): threshold for similarity between
+            the name argument and the names in the table. Defaults to 0.75
+        is_sorted (bool, optional): Defaults to True
 
     Returns:
-        dict[str, Any]: dictionary containing request status, client_ip, 
+        dict[str, Any]: dictionary containing request status, client_ip,
             and potential matches from the database
     """
     client_host = request.client.host
-    print(type(client_host))
-    is_sorted = False
 
     df = get_table()
 
