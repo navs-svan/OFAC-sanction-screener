@@ -6,6 +6,19 @@ Base = declarative_base()
 
 
 class Log(Base):
+    """
+    Class representing the Postgre table where logs will be stored
+
+    Attributes:
+        __tablename__: name of table
+        log_id: SERIAL column for the primary key/id 
+        client_ip: INET column for the client ip of the requester 
+        name_query: VARCHAR(250) column for the name parameter of the request 
+        threshold_query: NUMERIC column for the threshold parameter of the request
+        response: BOOLEAN columns for the response type 
+        timestamp: TIMESTAMP column for the timestamp when the request was made 
+    """
+
     __tablename__ = "request_logs"
 
     log_id = Column("id", Integer, primary_key=True)

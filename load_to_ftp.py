@@ -1,6 +1,4 @@
-import sys
 import json
-import time
 import pandas as pd
 import os
 from pathlib import Path
@@ -8,6 +6,12 @@ from ftplib import FTP_TLS
 
 
 def get_ftp() -> FTP_TLS:
+    """
+    Summary: establishes an FTP connection
+
+    Returns:
+        FTP_TLS: returns an authenticated FTP
+    """
     # FTP details
     FTPHOST = os.environ["FTPHOST"]
     FTPUSER = os.environ["FTPUSER"]
@@ -24,21 +28,43 @@ def get_ftp() -> FTP_TLS:
 
 
 def read_csv(config: dict) -> pd.DataFrame:
+    """
+    Summary: reads the contents of a csv file and stores
+        it into a pandas Dataframe
+
+    Arguments:
+        config (dict): parameters of the pd.read_csv function
+            stored in a dictionary
+
+    Returns:
+        pd.Dataframe: pandas Dataframe containing the contents
+            of the csv file
+    """
     url = config["URL"]
     params = config["PARAMS"]
     return pd.read_csv(filepath_or_buffer=url, **params)
 
 
 def upload_to_ftp(ftp: FTP_TLS, filesource: Path) -> None:
+    """
+    Summary: uploads csv files to ftp server
+
+    Arguments:
+        ftp (FTP_TLS): FTP connection
+        filesource: Path of csv source file
+    """
     with open(filesource, "rb") as f:
         ftp.storbinary(f"STOR {filesource.name}", f)
 
 
-def pipeline():
+def pipeline() -> None:
+    """
+    Summary: Overall pipeline function for uploading files to an FTP server. 
+    """
     ftp = get_ftp()
 
-    credentials_path = os.path.join(os.path.dirname(__file__), "config.json")
-    with open(credentials_path, "r") as f:
+    config_path = os.path.join(os.path.dirname(__file__), "config.json")
+    with open(config_path, "r") as f:
         config = json.load(f)
 
     for source_name, source_config in config.items():
@@ -53,7 +79,6 @@ def pipeline():
         # Delete csv file in local machine
         print(f"Deleting {FILEPATH.name}")
         os.remove(FILEPATH)
-
 
 
 if __name__ == "__main__":
